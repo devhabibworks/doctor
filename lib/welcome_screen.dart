@@ -1,15 +1,15 @@
+import 'package:doctor/constant.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({Key? key}) : super(key: key);
-//
+  //
   @override
   Widget build(BuildContext context) {
     // this code used to hide the status bar
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual,
         overlays: [SystemUiOverlay.bottom]);
-
     return Scaffold(
       body: SafeArea(
         child: Column(
@@ -74,25 +74,25 @@ class WelcomeScreen extends StatelessWidget {
                 ),
               ),
             ),
-
             //button
-
             Expanded(
-              flex: 1,
-              child: Container(
-                width: double.infinity,
-                alignment: Alignment.center,
-                margin: const EdgeInsets.all(16),
-                decoration: BoxDecoration(
-                  color: const Color(0xff8a86e2),
-                  borderRadius: BorderRadius.circular(16),
-                ),
-                child: const Text(
-                  "Get Started",
-                  style: TextStyle(color: Colors.white, fontSize: 18),
-                ),
-              ),
-            )
+                flex: 1,
+                child: Container(
+                  width: double.infinity,
+                  alignment: Alignment.center,
+                  margin: const EdgeInsets.symmetric(
+                    vertical: 16,
+                    horizontal: 20,
+                  ),
+                  decoration: BoxDecoration(
+                    color: purpleColor,
+                    borderRadius: BorderRadius.circular(16),
+                  ),
+                  child: const Text(
+                    "Get Statred",
+                    style: TextStyle(fontSize: 18, color: Colors.white),
+                  ),
+                ))
           ],
         ),
       ),
