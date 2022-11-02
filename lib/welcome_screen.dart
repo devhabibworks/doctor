@@ -84,13 +84,23 @@ class WelcomeScreen extends StatelessWidget {
                     vertical: 16,
                     horizontal: 20,
                   ),
-                  decoration: BoxDecoration(
-                    color: purpleColor,
-                    borderRadius: BorderRadius.circular(16),
-                  ),
-                  child: const Text(
-                    "Get Statred",
-                    style: TextStyle(fontSize: 18, color: Colors.white),
+                  child: InkWell(
+                    splashColor: pinkColor,
+                    onTap: () {
+                      Navigator.pushNamed(context, "home");
+                    },
+                    child: Container(
+                      alignment: Alignment.center,
+                      width: double.infinity,
+                      decoration: BoxDecoration(
+                        color: purpleColor,
+                        borderRadius: BorderRadius.circular(16),
+                      ),
+                      child: const Text(
+                        "Get Statred",
+                        style: TextStyle(fontSize: 18, color: Colors.white),
+                      ),
+                    ),
                   ),
                 ))
           ],
