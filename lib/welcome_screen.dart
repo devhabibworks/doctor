@@ -20,6 +20,12 @@ class WelcomeScreen extends StatelessWidget {
               child: Stack(
                 children: [
                   Container(
+                      alignment: Alignment.bottomCenter,
+                      padding: const EdgeInsets.symmetric(horizontal: 8),
+                      child: Image.asset(
+                        "image/wave.png",
+                      )),
+                  Container(
                       margin: const EdgeInsets.only(bottom: 16),
                       decoration: const BoxDecoration(
                           color: Color(0xfff6f6fb),
@@ -30,12 +36,6 @@ class WelcomeScreen extends StatelessWidget {
                       padding: const EdgeInsets.symmetric(horizontal: 8),
                       child: Image.asset(
                         "image/image1.png",
-                      )),
-                  Container(
-                      alignment: Alignment.bottomCenter,
-                      padding: const EdgeInsets.symmetric(horizontal: 8),
-                      child: Image.asset(
-                        "image/wave.png",
                       )),
                 ],
               ),
