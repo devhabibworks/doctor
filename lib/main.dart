@@ -1,5 +1,5 @@
 import 'package:doctor/home_screen.dart';
-import 'package:doctor/welcom_screen.dart';
+import 'package:doctor/welcome_screen.dart';
 import 'package:flutter/material.dart';
 
 void main(List<String> args) {
