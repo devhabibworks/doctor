@@ -84,6 +84,7 @@ class WelcomeScreen extends StatelessWidget {
                     vertical: 16,
                     horizontal: 20,
                   ),
+                  color: null,
                   child: InkWell(
                     splashColor: pinkColor,
                     onTap: () {
