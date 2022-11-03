@@ -1,7 +1,9 @@
+import 'package:doctor/widgets/categories_list.dart';
 import 'package:doctor/widgets/category.dart';
 import 'package:doctor/widgets/custome_appbar.dart';
 import 'package:doctor/widgets/custome_offer.dart';
 import 'package:doctor/widgets/doctor_card.dart';
+import 'package:doctor/widgets/doctor_list.dart';
 import 'package:doctor/widgets/search_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -32,18 +34,7 @@ class HomeScreen extends StatelessWidget {
             const SizedBox(height: 24),
 
             ///categories
-            SizedBox(
-              height: 70,
-              child: ListView(
-                scrollDirection: Axis.horizontal,
-                children: const [
-                  Category(),
-                  Category(),
-                  Category(),
-                  Category(),
-                ],
-              ),
-            ),
+            const CategoriesList(),
             const SizedBox(height: 32),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -61,19 +52,7 @@ class HomeScreen extends StatelessWidget {
             const SizedBox(height: 18),
 
             ///doctor list
-
-            SizedBox(
-              height: 200,
-              child: ListView(
-                scrollDirection: Axis.horizontal,
-                children: const [
-                  DoctorCard(),
-                  DoctorCard(),
-                  DoctorCard(),
-                  DoctorCard(),
-                ],
-              ),
-            ),
+            const DoctorList(),
           ],
         ),
       ),

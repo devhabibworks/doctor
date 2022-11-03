@@ -2,7 +2,10 @@ import 'package:doctor/constant.dart';
 import 'package:flutter/material.dart';
 
 class Category extends StatelessWidget {
-  const Category({Key? key}) : super(key: key);
+  Category({Key? key, required this.imagePath, required this.name})
+      : super(key: key);
+  String imagePath;
+  String name;
 
   @override
   Widget build(BuildContext context) {
@@ -14,14 +17,15 @@ class Category extends StatelessWidget {
           color: purpleColor.withOpacity(0.2)),
       child: Row(
         children: [
-          Icon(
-            Icons.mouse,
-            color: purpleColor,
+          Image.asset(
+            imagePath,
+            height: 30,
+            width: 30,
           ),
           const SizedBox(
             width: 5,
           ),
-          const Text("Detist")
+          Text(name)
         ],
       ),
     );

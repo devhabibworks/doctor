@@ -2,7 +2,17 @@ import 'package:doctor/constant.dart';
 import 'package:flutter/material.dart';
 
 class DoctorCard extends StatelessWidget {
-  const DoctorCard({Key? key}) : super(key: key);
+  DoctorCard(
+      {Key? key,
+      required this.department,
+      required this.imagePath,
+      required this.name,
+      required this.rate})
+      : super(key: key);
+  String imagePath;
+  String name;
+  double rate;
+  String department;
 
   @override
   Widget build(BuildContext context) {
@@ -18,10 +28,10 @@ class DoctorCard extends StatelessWidget {
             children: [
               Container(
                 alignment: Alignment.center,
-                child: const CircleAvatar(
+                child: CircleAvatar(
                   radius: 50,
                   backgroundImage: AssetImage(
-                    "image/image1.png",
+                    imagePath,
                   ),
                 ),
               ),
@@ -33,13 +43,13 @@ class DoctorCard extends StatelessWidget {
                     decoration: BoxDecoration(
                         color: whiteColor,
                         borderRadius: BorderRadius.circular(15)),
-                    child: Row(children: const [
-                      Icon(
+                    child: Row(children: [
+                      const Icon(
                         Icons.star_border_outlined,
                         size: 20,
                         color: Colors.orangeAccent,
                       ),
-                      Text("4.9")
+                      Text("$rate")
                     ])),
               )
             ],
@@ -48,13 +58,13 @@ class DoctorCard extends StatelessWidget {
             height: 8,
           ),
           Text(
-            "DR. Arlene McCoy",
+            name,
             style: TextStyle(
                 color: blackColor, fontSize: 18, fontWeight: FontWeight.w500),
           ),
-          const Text(
-            "Therabist , 7 y.e",
-            style: TextStyle(color: Colors.grey),
+          Text(
+            department,
+            style: const TextStyle(color: Colors.grey),
           )
         ],
       ),
