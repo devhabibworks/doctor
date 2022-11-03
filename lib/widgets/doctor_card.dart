@@ -7,9 +7,10 @@ class DoctorCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: const EdgeInsets.symmetric(horizontal: 16),
       padding: const EdgeInsets.all(20),
       decoration: BoxDecoration(
-          color: purpleColor.withOpacity(.2),
+          color: purpleColor.withOpacity(.1),
           borderRadius: BorderRadius.circular(18)),
       child: Column(
         children: [
@@ -27,12 +28,34 @@ class DoctorCard extends StatelessWidget {
               Positioned(
                 bottom: 0,
                 left: 25,
-                child: Row(children: const [Icon(Icons.stars), Text("data")]),
+                child: Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 8),
+                    decoration: BoxDecoration(
+                        color: whiteColor,
+                        borderRadius: BorderRadius.circular(15)),
+                    child: Row(children: const [
+                      Icon(
+                        Icons.star_border_outlined,
+                        size: 20,
+                        color: Colors.orangeAccent,
+                      ),
+                      Text("4.9")
+                    ])),
               )
             ],
           ),
-          const Text("data"),
-          const Text("data")
+          const SizedBox(
+            height: 8,
+          ),
+          Text(
+            "DR. Arlene McCoy",
+            style: TextStyle(
+                color: blackColor, fontSize: 18, fontWeight: FontWeight.w500),
+          ),
+          const Text(
+            "Therabist , 7 y.e",
+            style: TextStyle(color: Colors.grey),
+          )
         ],
       ),
     );
