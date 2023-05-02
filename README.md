@@ -1,6 +1,6 @@
-# doctor
+# Doctor Application
 
-A new Flutter project.
+A Simple Project For BBSoft Studnt
 
 ## Getting Started
 
